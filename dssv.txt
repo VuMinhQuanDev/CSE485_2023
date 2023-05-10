@@ -1,4 +1,4 @@
 1,Vũ Minh Quân,12,12
 2,Nguyễn Xuân Hoàng,20,8
 3,Nguyễn Thị Thanh,20,8
-4,Đinh Thị Lan,20,8
+4,Lan Đinh,20,8
