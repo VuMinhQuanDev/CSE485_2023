@@ -35,52 +35,16 @@ if(isset($_POST['submit'])){
     foreach($students as $student) {
         $data = explode(' ', $student);
         if(trim($data[1]) === trim($name)) {
-            echo "<script>alert('Sinh viên đã tồn tại trong danh sách!');</script>";
+            echo "<script>window.location.href = 'readFile.php';</script>";
             exit();
         }
     }
-    $new_student = count($students)+1 . "$id,$name,$age,$grade\n";
+    $new_student = "$id,$name,$age,$grade\n";
     file_put_contents('dssv.txt', $new_student, FILE_APPEND);
     header('Location: readFile.php');
 }
 
 
-// // Lấy nội dung của file dssv.txt
-// $data = file_get_contents('dssv.txt');
-
-// // Chuyển đổi nội dung sang mảng danh sách sinh viên
-// $students = explode("\n", $data);
-// // Loại bỏ phần tử cuối cùng (vì có thể trống)
-// array_pop($students);
-
-// // Xử lý khi người dùng submit form
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//     // Lấy thông tin sinh viên mới từ form
-//     $id = $_POST['id'];
-//     $name = $_POST['name'];
-//     $age = $_POST['age'];
-//     $grade = $_POST['grade'];
-
-//     // Kiểm tra mã sinh viên đã tồn tại trong danh sách chưa
-//     $exists = false;
-//     foreach ($students as $student) {
-//         $info = explode('|', $student);
-//         if ($info[0] == $id) {
-//             $exists = true;
-//             break;
-//         }
-//     }
-
-//     // Nếu mã sinh viên đã tồn tại, hiển thị thông báo lỗi
-//     if ($exists) {
-//         echo 'Mã sinh viên đã tồn tại.';
-//     } else {
-//         // Nếu mã sinh viên chưa tồn tại, thêm thông tin vào danh sách và ghi vào file
-//         $newStudent = $id . '|' . $name . '|' . $age . '|' . $grade . "\n";
-//         file_put_contents('dssv.txt', $newStudent, FILE_APPEND);
-//         echo 'Thêm sinh viên thành công.';
-//     }
-// }
 ?>
 
 
@@ -125,7 +89,7 @@ if(isset($_POST['submit'])){
 <body>
     <h2 style="text-align:center">Form add student</h2>
 
-	<form method="post" action="add_student.php">
+	<form method="post" action="readFile.php">
 		<label for="id">ID:</label>
 		<input type="text" id="id" name="id" required>
 
