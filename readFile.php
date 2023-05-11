@@ -36,8 +36,6 @@ if(isset($_POST['submit'])){
         $data = explode(',', $student);
         if(trim($data[1]) === trim($name)) {
             echo "<script>alert('Sinh viên đã tồn tại trong danh sách!');</script>";
-            //Nếu sinh viên tồn tại thì hiện lại form để nhập lại
-            echo "<script>window.location.href = 'readFile.php';</script>";
             exit();
         }
     }
