@@ -1,1 +1,6 @@
-12,Vũ Minh Quân,12,12
+1 ,John ,12 ,6
+2 ,Jane ,13 ,7
+3 ,Michael ,11 ,5
+4 ,Emily ,12 ,6
+5 ,James ,14 ,8
+7,Lan,23,8
