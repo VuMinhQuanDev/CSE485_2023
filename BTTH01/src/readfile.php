@@ -8,7 +8,7 @@ $ds_sv = array();
 // Read every line of the file
 while (($line = fgets($file)) !== false) {
   // Split the words in each data line into an array of words
-  $words = explode(' ', $line);
+  $words = explode(',', $line);
 
   $sv = new stdClass();
   $sv->id = $words[0];
