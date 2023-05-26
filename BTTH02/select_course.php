@@ -10,8 +10,8 @@ if (!isset($_SESSION['username'])) {
 // Kết nối với cơ sở dữ liệu MySQL
 $servername = 'localhost';
 $username = 'root';
-$password = '1802';
-$dbname = 'btth02';
+$password = '';
+$dbname = 'btth2';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -44,3 +44,7 @@ if ($result->num_rows > 0) {
 
 // Đóng kết nối
 $conn->close();
+?>
+
+
+

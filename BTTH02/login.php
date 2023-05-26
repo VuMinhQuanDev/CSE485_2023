@@ -21,24 +21,21 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Đăng nhập</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
-    <h2>Đăng nhập</h2>
-
-    <form action="login.php" method="POST">
-        <label for="username">Tên đăng nhập:</label>
-        <input type="text" name="username" id="username" required><br><br>
-        <label for="password">Mật khẩu:</label>
-        <input type="password" name="password" id="password" required><br><br>
-        <input type="submit" value="Đăng nhập">
-    </form>
+    <div class="container">
+        <h2>Login</h2>
+        <form method="post" action="login.php">
+            <input type="text" name="username" placeholder="Username" required style="width: 280px;"><br>
+            <input type="password" name="password" placeholder="Password" required style="width: 280px;"><br>
+            <input type="submit" name="login" value="Login">
+        </form>
+    </div>
 </body>
-
 </html>
+
