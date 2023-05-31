@@ -1,0 +1,20 @@
+
+body{
+    background-color: #f2f3f7!important
+}
+
+.h3{
+    line-height: 1.2;
+    font-family: Roboto;
+    margin: 1.35rem auto;
+    font-weight: 700;
+}
+
+.container{
+    background-color: #fff; 
+    border-radius: 15px
+}
+
+#calendar{
+    padding: 30px 25px;
+}
